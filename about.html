@@ -33,6 +33,8 @@ header-img: "img/about-bg.jpg"
         <li><a href="http://jekyll.com.cn/">jekyll</a></li>
         
     </ul>
+</div>
+
 
 
 <!-- Handle Language Change -->
@@ -41,10 +43,8 @@ header-img: "img/about-bg.jpg"
     var $zh = document.querySelector(".zh");
     var $en = document.querySelector(".en");
     var $select = document.querySelector("select");
-
     // bind hashchange event
     window.addEventListener('hashchange', _render);
-
     // handle render
     function _render(){
         var _hash = window.location.hash;
@@ -61,7 +61,6 @@ header-img: "img/about-bg.jpg"
             $en.style.display = "none";
         }
     }
-
     // handle select change
     function onLanChange(index){
         if(index == 0){
@@ -70,7 +69,6 @@ header-img: "img/about-bg.jpg"
             window.location.hash = "#en"
         }
     }
-
     // init
     _render();
 </script>
@@ -113,7 +111,6 @@ header-img: "img/about-bg.jpg"
     var disqus_shortname = "{{site.disqus.username}}";
     var disqus_identifier = "{{site.disqus.username}}/{{page.url}}";
     var disqus_url = "{{site.url}}{{page.url}}";
-
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -122,4 +119,3 @@ header-img: "img/about-bg.jpg"
 </script>
 <!-- disqus 公共JS代码 end -->
 {% endif %}
-
